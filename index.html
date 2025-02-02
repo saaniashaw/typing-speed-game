@@ -7,12 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Typing Speed Test</h1>
-    <p id="word-display">Type this text...</p>
-    <input type="text" id="text-input" placeholder="Start typing here...">
-    <p id="timer">Time: 0s</p>
-    <p id="wpm">WPM: 0</p>
-    <button id="restart">Restart</button>
+    <!-- Difficulty selection -->
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <!-- Dark mode toggle -->
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+    <!-- Game area -->
+    <h1>Typing Speed Game</h1>
+    <div id="word-display"></div>
+    <input type="text" id="word-input" placeholder="Type the word..." />
+    <button id="start-button">Start Game</button>
+    <p id="timer-display">Time: 10</p>
+    <p id="score-display">Score: 0</p>
+    <!--Progress feature-->
+    <div id="progress-container">
+        <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+    
+
     <script src="script.js"></script>
 </body>
 </html>
